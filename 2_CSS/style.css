@@ -1,0 +1,192 @@
+body {
+  font-family: helvetica, 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: left;
+  padding: 20px;
+}
+
+.logo {
+  width: 50px; /* Adjust the size as needed */
+  height: auto;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 14px; /* Adjust the font size as needed */
+  color: #333;
+}
+/* About Me Section Constructed using Flexbox */
+
+#about-me {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.profile-image {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+  margin: 20px
+}
+
+
+
+#projects {
+  padding: 20px;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+h2, h3 {
+  margin: 20px;
+  padding-bottom: 20px;
+}
+
+.project img {
+  max-width: 100%; /* Ensure images don't exceed their container */
+  height: auto;
+  width: 600px; /* Set the desired width */
+}
+
+/* My Work Section Constructed using CSS Grid */
+
+#projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* Adjust as needed for spacing between grid items */
+  text-align: left;
+}
+
+.projectgrid > div {
+  width: 100%; /* Adjust as needed for spacing between grid items */
+  margin-bottom: 20px;
+}
+
+.projectgrid h3 {
+  margin: 10px 0;
+}
+
+.projectgrid img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* My UX Skills section coded using CSS flex */
+
+#skills {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+}
+
+.flexContainer {
+  width: 30%; /* Set a width of 30% for each flex container */
+  margin: 10px; /* Adjust margin as needed for spacing between flex containers */
+  padding: 20px; /* Adjust padding as needed for spacing within each flex container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.flexContainer img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+footer {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: left;
+}
+
+footer nav {
+  margin-top: 0;
+}
+
+footer ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+footer li {
+  margin-right: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Your existing styles go here */
+
+/* Mobile media query */
+@media only screen and (max-width: 600px) {
+  /* Flexbox styles for mobile */
+  #about-me,
+  #skills {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .profile-image {
+    width: 100%; /* Make the profile image take up the full width on mobile */
+    max-width: 200px; /* Set a maximum width for the profile image */
+    margin: 20px; /* Reset margin for profile image in mobile view */
+  }
+
+  #about-me {
+    max-width: 100%; /* Ensure the paragraph doesn't go off screen on mobile */
+    margin: 20px;
+  }
+
+  .flexContainer {
+    width: 100%;
+    margin: 10px 0; /* Adjust margin as needed for spacing between flex containers */
+    padding: 20px; /* Adjust padding as needed for spacing within each flex container */
+  }
+
+  /* Grid styles for mobile */
+  #projects {
+    grid-template-areas:
+      "project1"
+      "project2"
+      "project3"
+      "project4";
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 100%;
+  }
+}
+
+
+
+
+
